@@ -31,8 +31,11 @@ categories部分：
 ```
 
 
-#MMD框架格式转换
+# MMD框架格式转换
 
 在 MMDetection 和 MMYOLO 里，几乎所有的训练都是依靠 COCO JSON 标注文件，因此我们需要先将在 labelme 中转化得到的 voc 数据转化为 coco 格式的数据才能正常的进行训练。幸运的是，在 MMDetection 源码中就提供了这样的一个脚本来帮我们进行转化，我们利用这个脚本就能实现 voc 格式数据集转化成 coco 格式数据集。但是前提是要在 MMDeteciton 源码下的 mmdet/evaluation/functional/class_names.py 这个 Python 文件里找到coco_classes 和 voc_classes 的位置（按ctrl+F搜索即可）并添加我们需要的标签。不然将无法进行转化。在这里我们要添加的标签就是“helmet”、“person”、“head”。
+![image](https://github.com/1999luodi/pascaltococo/assets/75122356/3105aee7-344d-4e53-955a-a76e9c1bcd70)
+
+接下来我们就需要进入源码中找到 tools/dataset_converters/pascal_voc.py 文件，并了解其所需要的文件结构和转化后的内容。由于官方提供的代码转换出来的格式并不符合预期，我对该代码进行了修正，从而让 VOC 转出来的 COCO 格式直接可以用于实际的训练当中（修改后删除了 trainval.txt 和 test.txt 的转换，所以我们只需要考虑训练集和验证集的内容即可。另外还将根据 xml 的标注文件将图片文件按照官方 COCO 数据集的形式复制进入，那么我们就不再需要额外的脚本进行此类操作）。
 
 
