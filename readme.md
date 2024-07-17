@@ -4,6 +4,12 @@
 3. 执行main.py文件
 
 
+# 文件介绍
+1. maketxt.py 首先检索xml的文件名，根据划分比例生成划分好的txt文件
+2. split_datasets.py 根据txt文件copy数据的照片
+3. pascal2coco.py 根据txt文件中的文件名，生成annotation文件夹，其中包含各个划分的json文件
+
+
 # coco 数据集
 coco的annotiaon.json主要部分
 ```    
