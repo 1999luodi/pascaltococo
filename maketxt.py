@@ -35,8 +35,11 @@ def makeTXT_811(trainpercent,valpercent,testpercent):
     except OSError:
         pass
     os.makedirs(txtsavepath, exist_ok=True)
-    total_xml = os.listdir(xmlfilepath)  # 获取xml文件列表
 
+    # 当注释文件夹有多个子文件时将不能获取全部的xml文件
+    # total_xml = os.listdir(xmlfilepath)  # 获取xml文件列表
+    total_xml=get_xml_files(xmlfilepath)
+    
     num = len(total_xml)  # 获取xml文件的数量
     list_indices = list(range(num))  # 获取xml文件的序列号
     random.shuffle(list_indices)  # 使用shuffle函数打乱列表的次序

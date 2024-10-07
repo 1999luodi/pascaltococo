@@ -4,7 +4,8 @@ ROOT = r"F:\数据集\GermPredDataset\SecaleCereale"
 #源数据的名称
 DATASET_NAME = 'SecaleCereale'
 #源数据的类别
-CATEGORY_LIST = ["sc_im", "sc_el"]
+CATEGORY_LIST = ["ungerminated", "germinating","germinated","primary root","secondary root"]
+
 
 MODE=["trainval2017","train2017", "val2017", "test2017"]
 
