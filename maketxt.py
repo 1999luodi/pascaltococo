@@ -13,6 +13,19 @@ train:val:test 比例可以自己调控
 # (train, val): test=0.9:0.1  train:val=0.8:0.2
 
 
+
+def get_xml_files(annotations_folder):
+    '''
+    return:得到文件中所有子文件夹的xml列表
+    '''
+    xml_files = []
+    for root, _, files in os.walk(annotations_folder):
+        for file in files:
+            if file.endswith('.xml'):
+                xml_files.append(os.path.join(root, file))
+    return xml_files
+
+
 def makeTXT_811(trainpercent,valpercent,testpercent):
     xmlfilepath = config.ANNOTATION_ROOT  # 获取你源数据的注释路径
     txtsavepath = config.TARGETROOT  # 设置你txt的保存路径
