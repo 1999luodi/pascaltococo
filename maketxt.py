@@ -22,6 +22,7 @@ def get_xml_files(annotations_folder):
         for file in files:
             if file.endswith('.xml'):
                 xml_files.append(os.path.join(root, file)) # /path/to/annotations/folder/example.xml
+                xml_files.append(file) # example.xml
     return xml_files
 
 
@@ -35,8 +36,10 @@ def makeTXT_811(trainpercent,valpercent,testpercent):
         pass
     os.makedirs(txtsavepath, exist_ok=True)
 
-    # 当注释文件夹有多个子文件时将不能获取全部的xml文件
+    # 当注释文件夹没有子文件而是xml文件时获取全部的xml文件
     # total_xml = os.listdir(xmlfilepath)  # 获取xml文件列表
+    
+    # 当注释文件夹有多个子文件时获取全部的xml文件 
     total_xml=get_xml_files(xmlfilepath)
 
     num = len(total_xml)  # 获取xml文件的数量

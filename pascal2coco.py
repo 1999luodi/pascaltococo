@@ -68,8 +68,7 @@ def convert_to_cocodetection(imageSets_path,output_dir):
     
     
 
-
-    # 将数据集的类别信息 存放到字典中
+    ## 将数据集的类别信息 存放到字典中
     #  数据集的类型
     category_list = config.CATEGORY_LIST
     label_ids = {name: i + 1 for i, name in enumerate(category_list)}
@@ -79,6 +78,8 @@ def convert_to_cocodetection(imageSets_path,output_dir):
 
     # 读取xml文件并转化为json
     for mode in config.MODE.values():
+        
+        ## 将图像信息 注释信息放入
         images = []
         annotations = []
         object_count = 0  # xml中的object数量也是bbox的个数
