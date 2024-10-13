@@ -13,6 +13,8 @@ train:val:test 比例可以自己调控
 
 
 
+
+
 def get_xml_files(annotations_folder):
     '''
     return:得到文件中所有子文件夹的xml列表
@@ -66,7 +68,7 @@ def makeTXT_811(trainpercent,valpercent,testpercent):
             name = os.path.splitext(total_xml[i])[0] + '\n'
 
             if i in trainval:
-                ftrainval.write(name)
+                # ftrainval.write(name)
                 if i in train:
                     ftrain.write(name)
                 else:
