@@ -8,6 +8,7 @@
 1. maketxt.py 首先检索xml的文件名，根据划分比例生成划分好的txt文件
 2. split_datasets.py 根据txt文件copy数据的照片
 3. pascal2coco.py 根据txt文件中的文件名，生成annotation文件夹，其中包含各个划分的json文件
+4. classmerge.py 根据要求将源数据集的class类合并想要的新class类，生成新的标准json文件
 
 
 # coco 数据集
