@@ -1,7 +1,6 @@
 import os
 ## 源数据的根路径设置
-ROOT = r"/home/luodi23/mmdetection/data/archive"
-# ROOT="./dataset"
+ROOT="./dataset"
 
 #源数据的类别pg_im
 CATEGORY_LIST = ["ungerminated", "germinating","germinated","primary root","secondary root"]
