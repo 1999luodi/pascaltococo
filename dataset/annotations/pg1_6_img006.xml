@@ -1,0 +1,105 @@
+<annotation>
+    <folder>PG1_6</folder>
+    <filename>pg1_6_img006.jpg</filename>
+    <path>/home/ngenze/PAPER/VALIDATION/PG/img/PG1/PG1_6/pg1_6_img006.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>624</width>
+        <height>624</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>437</xmin>
+            <ymin>393</ymin>
+            <xmax>477</xmax>
+            <ymax>428</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>361</xmin>
+            <ymin>421</ymin>
+            <xmax>399</xmax>
+            <ymax>461</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>257</xmin>
+            <ymin>377</ymin>
+            <xmax>293</xmax>
+            <ymax>420</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>312</xmin>
+            <ymin>277</ymin>
+            <xmax>348</xmax>
+            <ymax>310</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>204</xmin>
+            <ymin>279</ymin>
+            <xmax>250</xmax>
+            <ymax>314</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>155</xmin>
+            <ymin>374</ymin>
+            <xmax>189</xmax>
+            <ymax>410</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>435</xmin>
+            <ymin>295</ymin>
+            <xmax>472</xmax>
+            <ymax>334</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>375</xmin>
+            <ymin>163</ymin>
+            <xmax>410</xmax>
+            <ymax>202</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>296</xmin>
+            <ymin>168</ymin>
+            <xmax>336</xmax>
+            <ymax>204</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pg_im</name>
+        <confscore>0</confscore>
+        <bndbox>
+            <xmin>183</xmin>
+            <ymin>193</ymin>
+            <xmax>224</xmax>
+            <ymax>232</ymax>
+        </bndbox>
+    </object>
+</annotation>

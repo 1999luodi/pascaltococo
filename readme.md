@@ -35,9 +35,22 @@ categories部分：
     name：类别的名称。
     supercategory：类别的超类别，用于组织相关类别。
 ```
+# 用法
+```
+只有通过 maketxt.py 生成txt文件，才能通过 pascal2coco.py 生成json文件和通过 split_imgcopy.py 拷贝图像到新的文件夹从而建立一个独立的数据集文件
+
+```
+- 目录结构
+
+![目录](/resource/structure.jpg)
+
+- maketxt
 
 
-# MMD框架格式转换
+
+
+
+# 其他：MMD框架格式转换
 
 在 MMDetection 和 MMYOLO 里，几乎所有的训练都是依靠 COCO JSON 标注文件，因此我们需要先将在 labelme 中转化得到的 voc 数据转化为 coco 格式的数据才能正常的进行训练。幸运的是，在 MMDetection 源码中就提供了这样的一个脚本来帮我们进行转化，我们利用这个脚本就能实现 voc 格式数据集转化成 coco 格式数据集。但是前提是要在 MMDeteciton 源码下的 mmdet/evaluation/functional/class_names.py 这个 Python 文件里找到coco_classes 和 voc_classes 的位置（按ctrl+F搜索即可）并添加我们需要的标签。不然将无法进行转化。在这里我们要添加的标签就是“helmet”、“person”、“head”。
 ![image](https://github.com/1999luodi/pascaltococo/assets/75122356/3105aee7-344d-4e53-955a-a76e9c1bcd70)

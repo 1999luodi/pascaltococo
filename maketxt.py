@@ -22,7 +22,7 @@ def get_xml_files(annotations_folder):
         for file in files:
             if file.endswith('.xml'):
                 xml_files.append(os.path.join(root, file)) # /path/to/annotations/folder/example.xml
-                xml_files.append(file) # example.xml
+                # xml_files.append(file) # example.xml
     return xml_files
 
 

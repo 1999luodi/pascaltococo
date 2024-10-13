@@ -1,0 +1,3 @@
+./dataset/annotations/pg1_6_img010
+./dataset/annotations/pg1_6_img041
+./dataset/annotations/pg1_6_img046

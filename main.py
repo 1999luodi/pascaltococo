@@ -1,6 +1,7 @@
 import maketxt
-import split_datasets
+import split_imgcopy
 import pascal2coco 
-maketxt.maketxt(0.8,0.2,0) # train:val:test ->得到trainval、train、val、test的注释json文件
-# split_datasets.split() # 这个图像的复制，后期决定不使用
-pascal2coco.voco2coco()
+from config import SPLITSCALE
+maketxt.makeTXT_811(*SPLITSCALE) # train:val:test ->得到trainval、train、val、test的注释json文件
+split_imgcopy.split() 
+pascal2coco.voc2coco()

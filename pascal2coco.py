@@ -71,7 +71,7 @@ def convert_to_cocodetection(imageSets_path,output_dir):
     ## 将数据集的类别信息 存放到字典中
     #  数据集的类型
     category_list = config.CATEGORY_LIST
-    label_ids = {name: i + 1 for i, name in enumerate(category_list)}
+    label_ids = {name: i  for i, name in enumerate(category_list)}
     categories = []
     for k, v in label_ids.items():
         categories.append({"id": v, "name": k})
@@ -90,21 +90,12 @@ def convert_to_cocodetection(imageSets_path,output_dir):
             # 依次读取训练集或测试集中的每一张图片的名字
             with tqdm(total=len(file), desc="%s" % mode + ".json loading") as pbar:
                 for idx, namepath in enumerate(file):
-                    #由于数据集图像的结构dataset/01/xxx.img  ->01/xxx.img
-                    # namepath xx/xxdataset/10/img2994 ->10/img2294 +.jpg
-                    # 使用 split 方法
-                    name = "/".join(namepath.split("/")[-2:])  # 从倒数第2个元素开始拼接
+                    
                     
                     basename=os.path.basename(namepath)
-                    #josn文件所存的图像相对地址 这里需要和图像所存的结构相匹配
-                    '''
-                        如果图像的路径为data/img/xxx.jpg 
-                        annotation文件json路径在data/annotations/train.json
-
-                        那么json其中images中filename:xxx.jpg 
                     
-                    '''
-                    filename = name + ".jpg"
+                    filename = basename + ".jpg"
+                    # 注释所在的路径
                     annotation_name = namepath + ".xml"
                     #图像所在路径
                     img_path=namepath+ ".jpg"
@@ -143,8 +134,8 @@ def convert_to_cocodetection(imageSets_path,output_dir):
                         # 找到bndbox 对象
                         xmlbox = obj.find('bndbox')
                         # 获取对应的bndbox的数组 = ['xmin','xmax','ymin','ymax']
-                        bbox = (int(xmlbox.find('xmin').text), int(xmlbox.find('ymin').text),
-                                int(xmlbox.find('xmax').text), int(xmlbox.find('ymax').text))
+                        bbox = (float(xmlbox.find('xmin').text), float(xmlbox.find('ymin').text),
+                                float(xmlbox.find('xmax').text), float(xmlbox.find('ymax').text))
                         bbox=check_and_correct_bndbox(bbox)
                       
                         # 将voc的xyxy坐标格式，转换为coco的xywh格式
