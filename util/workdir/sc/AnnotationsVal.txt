@@ -1,0 +1,1 @@
+AnnotationsVal.txt总共有 0 个边界框面积小于 1024。
