@@ -40,7 +40,7 @@ if bbox_count>0:
 # 创建一个存储文件
 current_dir=os.getcwd()
 current_abs_path=os.path.dirname(os.path.abspath(__file__))
-workdir=os.path.join(current_abs_path,"workdir/pestdata")
+workdir=os.path.join(current_abs_path,"findbboxworkdir/pestdata")
 
 # 判断目录是否存在，不存在则创建
 if not os.path.exists(workdir):
